@@ -1,0 +1,65 @@
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+> Task :app:DebugMinSdkCheck
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:compileFlutterBuildDebug
+> Task :app:packJniLibsflutterBuildDebug
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:cleanMergeDebugAssets
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:copyFlutterAssetsDebug
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:outputDebugAppLinkSettings UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugKotlin FAILED
+
+FAILURE: Build completed with 3 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':app:compileDebugKotlin'.
+> Error while evaluating property 'friendPathsSet$kotlin_gradle_plugin_common' of task ':app:compileDebugKotlin'.
+   > Could not resolve all files for configuration ':app:debugCompileClasspath'.
+      > Failed to transform armeabi_v7a_debug-1.0.0-78fc3012e45889657f72359b005af7beac47ba3d.jar (io.flutter:armeabi_v7a_debug:1.0.0-78fc3012e45889657f72359b005af7beac47ba3d) to match attributes {artifactType=android-classes-jar, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-api}.
+         > Could not download armeabi_v7a_debug-1.0.0-78fc3012e45889657f72359b005af7beac47ba3d.jar (io.flutter:armeabi_v7a_debug:1.0.0-78fc3012e45889657f72359b005af7beac47ba3d)
+            > Could not get resource 'https://storage.googleapis.com/download.flutter.io/io/flutter/armeabi_v7a_debug/1.0.0-78fc3012e45889657f72359b005af7beac47ba3d/armeabi_v7a_debug-1.0.0-78fc3012e45889657f72359b005af7beac47ba3d.jar'.
+               > No space left on device
+      > Failed to transform x86_64_debug-1.0.0-78fc3012e45889657f72359b005af7beac47ba3d.jar (io.flutter:x86_64_debug:1.0.0-78fc3012e45889657f72359b005af7beac47ba3d) to match attributes {artifactType=android-classes-jar, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-api}.
+         > Could not download x86_64_debug-1.0.0-78fc3012e45889657f72359b005af7beac47ba3d.jar (io.flutter:x86_64_debug:1.0.0-78fc3012e45889657f72359b005af7beac47ba3d)
+            > Could not get resource 'https://storage.googleapis.com/download.flutter.io/io/flutter/x86_64_debug/1.0.0-78fc3012e45889657f72359b005af7beac47ba3d/x86_64_debug-1.0.0-78fc3012e45889657f72359b005af7beac47ba3d.jar'.
+               > No space left on device
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:compileDebugKotlin'.
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:38)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+
